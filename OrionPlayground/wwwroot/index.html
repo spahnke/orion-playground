@@ -22,8 +22,8 @@
 		});
 		require(["editorBootstrap"], function (editorFactory) {
 			editorFactory.bootstrap('embeddedEditor', function() { }).then(function (editorBootstrap) {
-				let editor = editorBootstrap.editorViewer.editor;
-				let editorViewer = editorBootstrap.editorViewer;
+				var editor = editorBootstrap.editorViewer.editor;
+				var editorViewer = editorBootstrap.editorViewer;
 
 				editorViewer.readonly = false;
 				// Hack until https://bugs.eclipse.org/bugs/show_bug.cgi?id=497528 gets fixed
