@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrionPlayground", "OrionPlayground\OrionPlayground.csproj", "{F729C61E-4334-4123-B3C4-AE8C1DE3E135}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F729C61E-4334-4123-B3C4-AE8C1DE3E135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F729C61E-4334-4123-B3C4-AE8C1DE3E135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F729C61E-4334-4123-B3C4-AE8C1DE3E135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F729C61E-4334-4123-B3C4-AE8C1DE3E135}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6C557544-56EE-4D7C-B6B0-5656D3901A08}
+	EndGlobalSection
+EndGlobal

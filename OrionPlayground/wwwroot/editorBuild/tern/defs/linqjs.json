@@ -1,0 +1,20 @@
+{
+	"!name": "linqjs",
+	"Enumerable": {
+		"!type": "",
+		"!doc": "linq.js",
+		"!url": "http://neue.cc/reference.htm",
+		"from": {
+			"!type": "fn(obj: [?]) -> +Enumerable",
+			"!doc": "Creates an Enumerable from an array.",
+			"!url": "http://neue.cc/reference.htm"
+		},
+		"prototype": {
+			"select": {
+				"!type": "fn(selector: string) -> +Enumerable",
+				"!doc": "Select.",
+				"!url": "http://neue.cc/reference.htm"
+			}
+		}
+	}
+}

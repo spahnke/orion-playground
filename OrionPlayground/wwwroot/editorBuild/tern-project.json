@@ -1,0 +1,9 @@
+{
+	"ecmaVersion": 7,
+	"libs": [".definitions/big", ".definitions/additionalDefinitions"],
+	"plugins": {
+		"testplugin": {
+			"location": "testPlugin"
+		}
+	}
+}

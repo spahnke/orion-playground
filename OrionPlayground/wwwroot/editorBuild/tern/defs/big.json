@@ -1,0 +1,140 @@
+{
+	"!name": "big",
+	"Big": {
+		"!type": "fn(value: number|string|Big)",
+		"!doc": "Returns a new instance of a Big number object.",
+		"!url": "http://mikemcl.github.io/big.js/#big",
+		"DP": {
+			"!type": "number",
+			"!doc": "The maximum number of decimal places of the results of operations involving division. It is relevant only to the div and sqrt methods, and the pow method when the exponent is negative.",
+			"!url": "http://mikemcl.github.io/big.js/#dp"
+		},
+		"RM": {
+			"!type": "number",
+			"!doc": "The rounding mode used in the above operations and by round, toExponential, toFixed and toPrecision.",
+			"!url": "http://mikemcl.github.io/big.js/#rm"
+		},
+		"prototype": {
+			"abs": {
+				"!type": "fn() -> +Big",
+				"!doc": "Returns a Big number whose value is the absolute value, i.e. the magnitude, of this Big number.",
+				"!url": "http://mikemcl.github.io/big.js/#abs"
+			},
+			"cmp": {
+				"!type": "fn(n: number|string|Big) -> number",
+				"!doc": "Returns an integer value indicating whether n is smaller, bigger, or equal to this Big number.",
+				"!url": "http://mikemcl.github.io/big.js/#cmp"
+			},
+			"div": {
+				"!type": "fn(n: number|string|Big) -> +Big",
+				"!doc": "Returns a Big number whose value is the value of this Big number divided by n.",
+				"!url": "http://mikemcl.github.io/big.js/#div"
+			},
+			"eq": {
+				"!type": "fn(n: number|string|Big) -> bool",
+				"!doc": "Returns true if the value of this Big equals the value of n, otherwise returns false.",
+				"!url": "http://mikemcl.github.io/big.js/#eq"
+			},
+			"gt": {
+				"!type": "fn(n: number|string|Big) -> bool",
+				"!doc": "Returns true if the value of this Big is greater than the value of n, otherwise returns false.",
+				"!url": "http://mikemcl.github.io/big.js/#gt"
+			},
+			"gte": {
+				"!type": "fn(n: number|string|Big) -> bool",
+				"!doc": "Returns true if the value of this Big is greater than or equal to the value of n, otherwise returns false.",
+				"!url": "http://mikemcl.github.io/big.js/#gte"
+			},
+			"lt": {
+				"!type": "fn(n: number|string|Big) -> bool",
+				"!doc": "Returns true if the value of this Big is less than the value of n, otherwise returns false.",
+				"!url": "http://mikemcl.github.io/big.js/#lt"
+			},
+			"lte": {
+				"!type": "fn(n: number|string|Big) -> bool",
+				"!doc": "Returns true if the value of this Big is less than or equal to the value of n, otherwise returns false.",
+				"!url": "http://mikemcl.github.io/big.js/#lte"
+			},
+			"minus": {
+				"!type": "fn(n: number|string|Big) -> +Big",
+				"!doc": "Returns a Big number whose value is the value of this Big number minus n.",
+				"!url": "http://mikemcl.github.io/big.js/#minus"
+			},
+			"mod": {
+				"!type": "fn(n: number|string|Big) -> +Big",
+				"!doc": "Returns a Big number whose value is the value of this Big number modulo n, i.e. the integer remainder of dividing this Big number by n.",
+				"!url": "http://mikemcl.github.io/big.js/#mod"
+			},
+			"plus": {
+				"!type": "fn(n: number|string|Big) -> +Big",
+				"!doc": "Returns a Big number whose value is the value of this Big number plus n.",
+				"!url": "http://mikemcl.github.io/big.js/#plus"
+			},
+			"power": {
+				"!type": "fn(n: number) -> +Big",
+				"!doc": "Returns a Big number whose value is the value of this Big number raised to the power exp.",
+				"!url": "http://mikemcl.github.io/big.js/#power"
+			},
+			"round": {
+				"!type": "fn(dp?: number, rm?: number) -> +Big",
+				"!doc": "Returns a Big number whose value is the value of this Big number rounded using rounding mode rm to a maximum of dp decimal places.",
+				"!url": "http://mikemcl.github.io/big.js/#round"
+			},
+			"sqrt": {
+				"!type": "fn() -> +Big",
+				"!doc": "Returns a Big number whose value is the square root of this Big number.",
+				"!url": "http://mikemcl.github.io/big.js/#sqrt"
+			},
+			"times": {
+				"!type": "fn(n: number|string|Big) -> +Big",
+				"!doc": "Returns a Big number whose value is the value of this Big number times n.",
+				"!url": "http://mikemcl.github.io/big.js/#times"
+			},
+			"toExponential": {
+				"!type": "fn(dp?: number) -> string",
+				"!doc": "Returns a string representing the value of this Big number in exponential notation to a fixed number of decimal places dp.",
+				"!url": "http://mikemcl.github.io/big.js/#toExponential"
+			},
+			"toFixed": {
+				"!type": "fn(dp?: number) -> string",
+				"!doc": "Returns a string representing the value of this Big number in normal notation to a fixed number of decimal places dp.",
+				"!url": "http://mikemcl.github.io/big.js/#toFixed"
+			},
+			"toPrecision": {
+				"!type": "fn(sd?: number) -> string",
+				"!doc": "Returns a string representing the value of this Big number to the specified number of significant digits sd.",
+				"!url": "http://mikemcl.github.io/big.js/#toPrecision"
+			},
+			"toString": {
+				"!type": "fn() -> string",
+				"!doc": "Returns a string representing the value of this Big number.",
+				"!url": "http://mikemcl.github.io/big.js/#toString"
+			},
+			"valueOf": {
+				"!type": "fn() -> string",
+				"!doc": "As toString.",
+				"!url": "http://mikemcl.github.io/big.js/#valueOf"
+			},
+			"toJSON": {
+				"!type": "fn() -> string",
+				"!doc": "As toString.",
+				"!url": "http://mikemcl.github.io/big.js/#toJSON"
+			},
+			"c": {
+				"!type": "[number]",
+				"!doc": "The coefficient of this Big number as an array of single digits.",
+				"!url": "http://mikemcl.github.io/big.js/#coefficient"
+			},
+			"e": {
+				"!type": "number",
+				"!doc": "The exponent of this Big number.",
+				"!url": "http://mikemcl.github.io/big.js/#exponent"
+			},
+			"s": {
+				"!type": "number",
+				"!doc": "The sign of this Big number represented as -1 or 1.",
+				"!url": "http://mikemcl.github.io/big.js/#sign"
+			}
+		}
+	}
+}

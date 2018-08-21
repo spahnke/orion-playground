@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html>
+
+<head>
+	<title>OrionPlayground</title>
+	<link rel="stylesheet" href="editorBuild/code_edit/built-codeEdit.css" />
+	<link rel="stylesheet" href="editorBuild/themes/prospecto.css" />
+	<style>
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		}
+
+		.editor {
+			height: 95vh;
+		}
+	</style>
+	<script src="bluebird.min.js"></script>
+	<script src="editorBuild/requirejs/require.min.js"></script>
+	<script>
+		require.config({
+			baseUrl: 'editorBuild'
+		});
+		require(["editorBootstrap"], function (editorFactory) {
+			editorFactory.bootstrap('embeddedEditor', function() { }).then(function (editorBootstrap) {
+				let editor = editorBootstrap.editorViewer.editor;
+				let editorViewer = editorBootstrap.editorViewer;
+
+				editorViewer.readonly = false;
+				// Hack until https://bugs.eclipse.org/bugs/show_bug.cgi?id=497528 gets fixed
+				editor.getTextView().setOptions({ readonly: false });
+				editor.getTextView()._setReadOnly(false);
+				editorViewer.inputManager.setReadOnly(false);
+
+				editorViewer.setContents("", "application/javascript");
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="embeddedEditor" class="editor"></div>
+</body>
+
+</html>
