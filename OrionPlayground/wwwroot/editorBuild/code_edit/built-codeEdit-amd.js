@@ -26947,7 +26947,7 @@ define("orion/editor/textView", [
 				}
 			}
 			if (!ignore) {
-				if (e.key) {
+				if (e.key && !util.isIE && !util.isChrome && !util.isFirefox && !util.isSafari) {
 					this._doContent(e.key);
 					if (e.preventDefault) { e.preventDefault(); }
 					return false;
@@ -26978,7 +26978,7 @@ define("orion/editor/textView", [
 			}
 			this._handleDocKeyUp(e);
 			// don't commit for space (it happens during JP composition)  
-			if (e.keyCode === 13) {
+			if (e.keyCode === 13 && !util.isMac) {
 				this._commitIME();
 			}
 		},
@@ -27370,7 +27370,7 @@ define("orion/editor/textView", [
 					if (0 < pixelY && pixelY < 1) { pixelY = 1; }
 				} else {
 					pixelX = -e.wheelDeltaX;
-					var linesToScroll = 8;
+					var linesToScroll = 3;
 					pixelY = (-e.wheelDeltaY / 120 * linesToScroll) * lineHeight;
 				}
 			}
@@ -29436,9 +29436,9 @@ define("orion/editor/textView", [
 				handlers.push({target: topNode, type: "dragleave", handler: function(e) { return that._handleDragLeave(e ? e : win.event);}}); //$NON-NLS-1$
 				handlers.push({target: topNode, type: "drop", handler: function(e) { return that._handleDrop(e ? e : win.event);}}); //$NON-NLS-1$
 				handlers.push({target: this._clientDiv, type: util.isFirefox > 26 ? "wheel" : util.isFirefox ? "DOMMouseScroll" : "mousewheel", handler: function(e) { return that._handleMouseWheel(e ? e : win.event); }}); //$NON-NLS-2$ //$NON-NLS-1$ //$NON-NLS-3$
-				if (this._clipDiv) {
-					handlers.push({target: this._clipDiv, type: util.isFirefox > 26 ? "wheel" : util.isFirefox ? "DOMMouseScroll" : "mousewheel", handler: function(e) { return that._handleMouseWheel(e ? e : win.event); }}); //$NON-NLS-2$ //$NON-NLS-1$ //$NON-NLS-3$
-				}
+				// if (this._clipDiv) {
+				// 	handlers.push({target: this._clipDiv, type: util.isFirefox > 26 ? "wheel" : util.isFirefox ? "DOMMouseScroll" : "mousewheel", handler: function(e) { return that._handleMouseWheel(e ? e : win.event); }}); //$NON-NLS-2$ //$NON-NLS-1$ //$NON-NLS-3$
+				// }
 				if (util.isFirefox && (!util.isWindows || util.isFirefox >= 15)) {
 					var MO = win.MutationObserver || win.MozMutationObserver;
 					if (MO) {
